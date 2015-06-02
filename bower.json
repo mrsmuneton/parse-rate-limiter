@@ -1,7 +1,7 @@
 {
   "name": "parse-rate-limiter",
-  "version": "0.0.1",
-  "homepage": "https://github.com/stangah/parse-rate-limiter",
+  "version": "0.0.2",
+  "homepage": "https://github.com/creativechannel/parse-rate-limiter",
   "authors": [
     "stangah <pstanger@gmail.com>"
   ],
