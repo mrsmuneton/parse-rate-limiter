@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/stangah/parse-rate-limiter",
   "dependencies": {
-    "parse": "git+https://github.com/creativechannel/parse-javascript"
+      "parse": "git+https://github.com/creativechannel/parse-javascript.git"
   },
   "devDependencies": {
     "chai": "^2.1.1",
