@@ -123,7 +123,8 @@
         };
 
         self.save = function(object) {
-console.log(object);
+            console.log('test log');
+            console.log(object);
             if(!(object instanceof Parse.Object)) {
                 throw new Error('save must accept a Parse Object');
             }
