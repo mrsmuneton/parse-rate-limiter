@@ -126,7 +126,7 @@
             console.log('test log');
             console.log(object);
             if(!(object instanceof Parse.Object)) {
-                throw new Error('save must accept a Parse Object');
+                throw new Error('save must accept a Parse Object!' + object);
             }
 
             self._saveQueue.push(object);
