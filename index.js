@@ -43,13 +43,14 @@
 
 }.call(this, this, function(Parse, _) {
 
-    var ParseRateLimiter = function(maxRate) {
+    var ParseRateLimiter = function(maxRate,destroy) {
 
         var self = this;
         var finalizedPromise;
         var toSave;
         var timer;
         var savePromise;
+        self.destroy = destroy ? 1 : 0;
         self._maxRate = maxRate;
         self._killSwitch = false;
         self._saveQueue = [];
@@ -81,7 +82,11 @@
             while(objects.length) {
                 toSave = _.first(objects, batchSize);
                 objects = _.rest(objects, batchSize);
-                promises.push(Parse.Object.saveAll(toSave));
+                if(self.destroy){
+                    promises.push(Parse.Object.destroyAll(toSave));
+                } else {
+                    promises.push(Parse.Object.saveAll(toSave));
+                }
             }
 
             return Parse.Promise.when(promises);
