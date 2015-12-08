@@ -76,7 +76,7 @@
         // can create requests too large for Parse to handle
         var saveInBatches = function(objects) {
             var toSave;
-            var batchSize = 10;
+            var batchSize = self._maxRate;
             var promises = [];
 
             while(objects.length) {
