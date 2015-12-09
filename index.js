@@ -144,16 +144,16 @@
             }
 
             // Make sure the array contains only parse objects
-//            var notParseObject = _.find(objects, function(object) {
-//                return !(object instanceof Parse.Object);
-//            });
-//            if(notParseObject) {
-//                inputError = 'Cannot process item that is not a Parse object';
-//                console.log('The following item failed input validation:');
-//                console.log(notParseObject);
-//            }
-//
-//            if(inputError) { throw new Error(inputError); }
+            var notParseObject = _.find(objects, function(object) {
+                return !(object instanceof Parse.Object);
+            });
+            if(notParseObject) {
+                inputError = 'Cannot process item that is not a Parse object';
+                console.log('The following item failed input validation:');
+                console.log(notParseObject);
+            }
+
+            if(inputError) { throw new Error(inputError); }
 
             // Add the items to the queue
             self._saveQueue = self._saveQueue.concat(objects);
