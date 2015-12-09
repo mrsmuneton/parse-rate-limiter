@@ -16,6 +16,9 @@
     "url": "https://github.com/stangah/parse-rate-limiter/issues"
   },
   "homepage": "https://github.com/stangah/parse-rate-limiter",
+    "dependencies": {
+      "parse": "git+https://github.com/creativechannel/parse-javascript.git#a747eccdac51c953f3cd6a2e23b1c40af66e5981"
+   },
   "devDependencies": {
     "chai": "^2.1.1",
     "mocha": "^2.2.1"
